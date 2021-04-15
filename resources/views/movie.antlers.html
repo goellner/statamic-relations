@@ -1,0 +1,9 @@
+<h1>{{ title }}</h1>
+
+<ul>
+    {{ collection:showings :movie:is="id" }} {{ if no_results }}
+    <li>No results</li>
+    {{ else }}
+    <li>{{ title }} - {{ showing_date }}</li>
+    {{ /if }} {{ /collection:showings }}
+</ul>

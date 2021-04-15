@@ -1,0 +1,14 @@
+title: Movies
+sites:
+  - en
+  - de
+template: movie
+layout: layout
+revisions: false
+route:
+  en: "movies/{slug}"
+  de: "filme/{slug}"
+sort_dir: asc
+date_behavior:
+  past: public
+  future: private

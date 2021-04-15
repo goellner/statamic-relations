@@ -1,0 +1,50 @@
+title: Showings
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: title
+        field:
+          type: text
+          required: true
+          validate:
+            - required
+          localizable: true
+  sidebar:
+    display: Sidebar
+    fields:
+      -
+        handle: slug
+        field:
+          type: slug
+          required: true
+          localizable: true
+          validate:
+            - required
+      -
+        handle: showing_date
+        field:
+          mode: single
+          time_enabled: true
+          time_required: true
+          earliest_date: '2021-01-01'
+          full_width: false
+          inline: false
+          columns: 1
+          rows: 1
+          display: 'Showing Date'
+          type: date
+          icon: date
+          listable: hidden
+      -
+        handle: movie
+        field:
+          max_items: 1
+          mode: default
+          collections:
+            - movies
+          display: Movie
+          type: entries
+          icon: entries
+          listable: hidden
